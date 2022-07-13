@@ -7,3 +7,4 @@ def index(request):
     return render(request, 'bast.html', {
         'title': 'main'
     })
+
