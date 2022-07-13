@@ -2,3 +2,7 @@ h2{
     text-align: center;
     margin: 10px;
 }
+
+div.information img{
+    margin-left: 10px;
+}
