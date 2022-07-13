@@ -1,28 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-<div class="bg">
-
-    
-
-</div>
 <link rel="stylesheet" href="{% static 'css/details.css' %}">
 
 <div class="Details">
 
-    
-
     <div class="Details">
 
-        <h2>Titles</h2>
-        <h3>Date : 13/</h3>
+        <h2>{{ post.title | safe }}</h2>
 
-        <div class="Informati0n" >
+        <div class="container" >
 
-            <img src="{% static 'image/dosa.jpg' %}" alt="">
+{#            <img src="{% static 'image/dosa.jpg' %}" alt="">#}
 
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam consequatur ipsum quo recusandae facilis vel consequuntur, nulla dolorum itaque molestiae sapiente sint obcaecati veniam libero quod necessitatibus maxime. Amet.
+                {{ post.content|safe }}
             </div>
             
 
