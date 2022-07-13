@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-all_post
+{% for i in post %}
+    {{ i.title|safe }}<br>
+    {{ i.cover_photo|safe }}<br>
+    {{ i.content|safe }}<br/>
+{% endfor %}
 </body>
 </html>
