@@ -19,3 +19,4 @@ def detail(request):
     return render(request, 'detail.html', {
         'title': 'main'
     })
+
