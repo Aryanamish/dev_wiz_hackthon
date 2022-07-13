@@ -2,7 +2,34 @@
 {% load static %}
 {% block body %}
 <link rel="stylesheet" href="{% static 'css/details.css' %}">
-
+    <style>
+    .main{
+        background-color: black;
+    }
+    .plain-link{
+        text-decoration: none;
+        color:black;
+    }
+    .plain-link:hover{
+        color:grey
+    }
+    .card:hover{
+        transform: scale(1.01);
+        transition: all 0.5s;
+    }
+    .title-food{
+        font-size:16px;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap:wrap;
+        width:100%;
+        font-weight: 900;
+    }
+    .cardrow{
+        margin-top:50px;
+    }
+    </style>
 
 
 
@@ -13,51 +40,28 @@
   </div>
  
   <div class="cardrow">
+    {% for i in post %}
+        <a class="plain-link" href="detail/{{ i.slug }}">
 
-    <div class="card">
-      <section><img src="{% static 'image/indian1.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
+    <div class="card" >
+      <section><img src="media/{{ i.cover_photo }}" alt=""></section>
+      <p class="title-food">{{ i.title}}</p>
     </div>
+    </a>
 
-    <div class="card">
-      <section><img src="{% static 'image/indian4.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
-    </div>
+{% endfor %}
+  {% for i in post %}
+        <a class="plain-link" href="detail/{{ i.slug }}">
 
-    <div class="card">
-      <section><img src="{% static 'image/indian5.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
+    <div class="card" >
+      <section><img class="rounded mx-auto d-block" src="media/{{ i.cover_photo }}" alt=""></section>
+      <p class="title-food">{{ i.title}}</p>
     </div>
+    </a>
 
-    <div class="card">
-      <section><img src="{% static 'image/indian5.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
-    </div>
+{% endfor %}
 
-    <div class="card">
-      <section><img src="{% static 'image/indian5.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
-    </div>
 
-    <div class="card">
-      <section><img src="{% static 'image/indian5.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
-    </div>
-
-    <div class="card">
-      <section><img src="{% static 'image/indian5.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
-    </div>
-
-    <div class="card">
-      <section><img src="{% static 'image/indian5.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
-    </div>
-
-    <div class="card">
-      <section><img src="{% static 'image/indian5.jpeg' %}" alt=""></section>
-      <h1>Veg Thali</h1>
-    </div>
 
   
   </div>

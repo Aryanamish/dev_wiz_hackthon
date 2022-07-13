@@ -18,6 +18,7 @@ def all_post(request):
     return render(request, 'all_post.html', {
         'title': 'main',
         'post': post,
+        'q': q,
     })
 
 

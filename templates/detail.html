@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
+<style>
+    .Details{
+        margin-top: 100px;
+    }
+</style>
 <link rel="stylesheet" href="{% static 'css/details.css' %}">
 
 <div class="Details">
 
     <div class="Details">
 
-        <h2>{{ post.title | safe }}</h2>
-
+        <h1 class="text-center">{{ post.title | safe }}</h1>
+    <br>
         <div class="container" >
 
 {#            <img src="{% static 'image/dosa.jpg' %}" alt="">#}
