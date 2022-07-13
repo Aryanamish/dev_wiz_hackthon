@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if title %}{{ title }}{% else %} Hackthon {% endif %}</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap502/css/bootstrap.css' %}">
+    <script src="{% static 'bootstrap502/js/bootstrap.js' %}"></script>
+
+
+    <script src="{% static 'fontawesome611/js/all.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'fontawesome611/css/all.css' %}">
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    {% block libs %}
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
