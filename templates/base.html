@@ -45,7 +45,7 @@
               </li> -->
             </ul>
             <form class="d-flex" method="get" action="/">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{ q }}">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{% if q %}{{ q }}{% endif %}">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
